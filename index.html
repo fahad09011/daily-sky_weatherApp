@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Sky</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="icon" href="./assets/favicon_io (1)/favicon-32x32.png" type="image/x-icon" />
+
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>  
+<script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+</head>
+
+<body>
+    <!-- top main container that holds all the sections/containers -->
+    <main class="main-container">
+        <!-- current weather section that hold current  -->
+        <section class="current-weather-section">
+            <!-- left side section that contains current weather data -->
+            <section class="left-current-weather">
+                <header class="header">
+                    <h2 class="title">Current Weather</h2>
+                    <div class="search-container">
+                        <input type="text" id="locationInput" placeholder="Enter location" required />
+                        <button type="submit" id="getWeatherBtn"> <span class="button_top"> Get Weather </span></button>
+                    </div>
+                </header>
+
+                <div class="current-data">
+                    <p class="city" id="city">Okeee</p>
+
+                    <p class="day-date" id="day_date">Saturday | 28/06/2025</p>
+
+                    <div class="weather_container">
+                        <p class="temprature" id="current_temprature">17 °C</p>
+
+                        <div class="weather_details">
+                            <img id="weather_icon" src="" alt="Weather Icon" />
+                            <p class="weather_description" id="weather_description">
+                                Sunny
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="data-container">
+                        <!-- <p class="feel-like">Feels like</p> -->
+                        <div class="card">
+                            <img class="current_weather_icon" src="./assets/water-temperature.png"
+                                alt="feels like temprature" />
+                            <span>
+                                <p class="data-title">Feels like</p>
+                                <p class="data-value" id="feels_like_data_value"></p>
+                            </span>
+                        </div>
+                        <div class="card">
+                            <img class="current_weather_icon" src="./assets/humidity.png" alt="" />
+                            <span>
+                                <p class="data-title">Humidity</p>
+                                <p class="data-value" id="humidity_data_value"></p>
+                            </span>
+                        </div>
+
+                        <div class="card">
+                            <img class="current_weather_icon" src="./assets/sunrise (1).png" alt="" />
+                            <span>
+                                <p class="data-title">Sunrise</p>
+                                <p class="data-value" id="sunrise_data_value"></p>
+                            </span>
+                        </div>
+                        <div class="card">
+                            <img class="current_weather_icon" src="./assets/sunset.png" alt="sunset" />
+                            <span>
+                                <p class="data-title">sunset</p>
+                                <p class="data-value" id="sunset_data_value"></p>
+                            </span>
+                        </div>
+
+                        <div class="card">
+                            <img class="current_weather_icon" src="./assets/eye.png" alt="Visibility" />
+                            <span>
+                                <p class="data-title">Visibility</p>
+                                <p class="data-value" id="visibility_data_value"></p>
+                            </span>
+                        </div>
+                        <div class="card">
+                            <img class="current_weather_icon" src="./assets/wind.png" alt="wind speed" />
+                            <span>
+                                <p class="data-title">wind Speed</p>
+                                <p class="data-value" id="wind_data_value"></p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- right side section that contains weekly chart and hourly weather forcast for current day -->
+            <section class="right-current-weather">
+                <section class="weekly-chart-section">
+                    <div id="chartContainer" style="height: 500px; width: 96%; position: relative;"></div>
+                </section>
+
+                <section class="hourly-forcast-section">
+                    <div id="hourly_forcast_container">
+                       
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <script src="./javasript/script.js"></script>
+    
+
+</body>
+
+</html>
